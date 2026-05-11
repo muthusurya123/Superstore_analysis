@@ -1,79 +1,120 @@
-Superstore Sales Analysis (Power BI)
-📌 Overview
+# Superstore Sales Data Analysis & Predictive Modeling
 
-This project focuses on analyzing Superstore sales performance using interactive Power BI dashboards.
-The goal is to uncover key business insights related to sales, profit, quantity, regional performance, and time-based trends to support data-driven decision-making.
+## Project Overview
+This project focuses on **data cleaning, exploratory data analysis (EDA), visualization, and predictive modeling** using a Superstore Sales dataset.
 
-The dashboard presents high-level KPIs along with detailed breakdowns across categories, sub-categories, regions, and months.
+The goal is to extract meaningful business insights and build a machine learning model to predict future profit values based on sales-related features.
 
-📊 Dashboard Highlights
+---
 
-Total Sales: Overall revenue generated
+## Features
 
-Total Profit: Net profit across all orders
+### Data Cleaning
+- Handled missing values
+- Removed duplicates
+- Processed categorical features
+- Converted date columns into useful time-based features
 
-Total Quantity Sold: Number of items sold
+### Exploratory Data Analysis (EDA)
+- Sales distribution analysis
+- Profit analysis
+- Category-wise and region-wise sales trends
+- Correlation analysis
+- Business insights through visualizations
 
-Total Orders: Count of customer orders
+### Data Visualization
+Visualizations were created using:
+- Matplotlib
+- Seaborn
 
-Profit Margin: Percentage profit over sales
+Charts included:
+- Sales vs Profit trends
+- Category analysis
+- Regional performance
+- Correlation heatmaps
+- Actual vs Predicted plots
 
-Category-wise Sales: Performance of Technology, Furniture, and Office Supplies
+---
 
-Sub-Category Analysis: Top-performing sub-categories
+## Predictive Modeling Using Machine Learning
 
-Regional Sales Distribution: Sales share across regions
+A supervised machine learning model was built to **predict future profit values**.
 
-Geographical Analysis: Sales and profit by state
+### Algorithms Used
+- Linear Regression
+- Decision Tree Regressor
+- Random Forest Regressor
 
-Monthly Trends: Sales and profit performance over time
+After evaluation, **Random Forest Regressor** performed best.
 
-📈 Key Visualizations Used
+### Model Evaluation Metrics
+The model was evaluated using:
 
-KPI Cards
+- **R² Score**
+- **MAE (Mean Absolute Error)**
+- **RMSE (Root Mean Squared Error)**
 
-Bar Charts
+### Future Prediction Example
+The trained model can predict future profit based on:
 
-Donut Chart
+- Year
+- Month
+- Sales
+- Quantity
+- Discount
+- Category
+- Sub-category
+- Region
+- Customer Segment
 
-Line Charts (Monthly Trends)
+Example prediction:
 
-Map Visualization (State-wise Sales & Profit)
+```python
+Category = Technology
+Sub-Category = Phones
+Region = West
+Year = 2026
+Sales = 5000
+Discount = 10%
+```
 
-🛠 Tools & Technologies
+The model predicts the expected **future profit** for the given conditions.
 
-Power BI
+---
 
-Data Cleaning & Transformation
+## Technologies Used
 
-DAX Measures
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-learn
+- Jupyter Notebook
 
-Data Visualization & Business Analytics
+---
 
-📁 Files Included
+## Project Structure
 
-superstoresales.png – Power BI dashboard snapshot
+```text
+superstore-sales-project/
+│── data/
+│   └── superstore_sales.csv
+│
+│── analysis/
+│   └── sales_analysis.ipynb
+│
+│── README.md
+```
 
-superstore_sales.csv – Original dataset
+---
 
-superstore_sales_enhanced.csv – Cleaned and processed dataset
+## Learning Outcomes
+This project helped in understanding:
 
-sales_analysis.ipynb – Data exploration and preprocessing
-
-README.md – Project documentation
-
-🔍 Key Insights
-
-Technology category contributes the highest sales revenue
-
-Certain sub-categories drive significant profit while others show lower margins
-
-Regional sales distribution reveals uneven performance across regions
-
-Sales and profit peak during specific months, indicating seasonality
-
-
-
-📌 Note
-
-This analysis is based on order-level transactional data, and all metrics represent aggregated business performance rather than individual customer behavior.
+- Data preprocessing
+- Data visualization
+- Exploratory Data Analysis (EDA)
+- Supervised Machine Learning
+- Model evaluation techniques
+- Predictive analytics
